@@ -1,10 +1,11 @@
 # MultiBlur
+<img src=https://github.com/user-attachments/assets/f032653f-d3e7-4052-9449-821d72106053 width="390" height="385" />
 
-A SwiftUI package to apply multiple blur effects with different radii and opacities beneath any SwiftUI element.
+A SwiftUI package to create blurred duplicates beneath any SwiftUI component, creating a nice glowy effect.
 
 ## Installation
 
-Add `MultiBlur` as a dependency in your `Package.swift` or use Xcode's "Add Package Dependency" feature.
+TBD
 
 ## Usage
 
