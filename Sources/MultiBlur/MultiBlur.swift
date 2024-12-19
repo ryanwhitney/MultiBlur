@@ -31,62 +31,40 @@ extension View {
 
 
 // Example Usage
-#if DEBUG
-@available(iOS 15.0, *)
+
 struct MultiBlur_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack{
+        VStack{
             VStack{
-                VStack{
-                    VStack {
-                        LinearGradient(
-                            colors: [.red, .blue, .green, .yellow],
-                            startPoint: .leading,
-                            endPoint: .trailing
-                        )
-                        .mask(
-                            Text("Hello, MultiBlur.")
-                                .font(Font.system(size: 46, weight: .bold))
-                                .multilineTextAlignment(.center)
-                        )
-
-                    }
-                    .multiblur([(10, 0.5), (20, 0.5), (40, 1), (60, 1)])
-                }.background(.black)
-                VStack{
-                    VStack {
-                        LinearGradient(
-                            colors: [.red, .blue, .green, .yellow],
-                            startPoint: .leading,
-                            endPoint: .trailing
-                        )
-                        .mask(
-                            Text("Hello, MultiBlur.")
-                                .font(Font.system(size: 46, weight: .bold))
-                                .multilineTextAlignment(.center)
-                        )
-
-                    }
-                    .multiblur([(10, 0.5), (20, 0.5), (40, 1), (60, 1)])
-                }
-            }
-            VStack {
                 LinearGradient(
                     colors: [.red, .blue, .green, .yellow],
                     startPoint: .leading,
                     endPoint: .trailing
                 )
+                .frame(width: 400, height: 200)
                 .mask(
-                    Image(systemName: "sparkle")
+                    Text("Hello, MultiBlur.")
                         .font(Font.system(size: 46, weight: .bold))
                         .multilineTextAlignment(.center)
                 )
+                .multiblur([(10, 0.5), (20, 0.5), (40, 1), (60, 1)])
+            }.background(Color.black)
+
+            VStack{
+                LinearGradient(
+                    colors: [.red, .blue, .green, .yellow],
+                    startPoint: .leading,
+                    endPoint: .trailing
+                )
+                .frame(width: 400, height: 200)
+                .mask(
+                    Text("Hello, MultiBlur.")
+                        .font(Font.system(size: 46, weight: .bold))
+                        .multilineTextAlignment(.center)
+                )
+                .multiblur([(10, 0.5), (20, 0.5), (40, 1), (60, 1)])
 
             }
-            .multiblur([(10, 0.5), (20, 0.5), (40, 1), (60, 1)])
-
         }
-
     }
 }
-#endif
